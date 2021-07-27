@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FamilleController!{% endblock %}
+
+{% block monTitre %}Voici la liste des familles :{% endblock %}
+{% block body %}
+
+{% for famille in familles %}
+  <h2 class="border-bottom border-primary"> {{ famille.libelle | capitalize}}</h2>
+  <div>{{ famille.description}}</div>
+{% endfor %}
+
+{% endblock %}
