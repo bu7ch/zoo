@@ -10,8 +10,11 @@
     <img src="{{asset("images/#{animal.image}")}}" class="img-fluid" alt="">
   </div>
   <div class="col-auto">
-    <h2>{{animal.nom}}</h2>
+    <h2> <a href="{{path("display_animal", {'id' : animal.id})}}">{{animal.nom}}</a></h2>
     <div>{{ animal.description }}</div>
+    <div>
+    <a  class="btn btn-primary"href=""> {{ animal.famille.libelle }}</a>
+    </div>
   </div>
 </div>
   
