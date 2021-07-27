@@ -15,6 +15,12 @@
     <div>
     <a  class="btn btn-primary"href="{{path('display_famille', {'id':animal.famille.id})}}"> {{ animal.famille.libelle }}</a>
     </div>
+    <div>
+    Présence de l'animal sur les continents :
+    {% for continent in animal.continents %}
+      <a href="" class="btn btn-warning"> {{ continent.libelle }}</a>
+    {% endfor %}
+    </div>
   </div>
 </div>
   
