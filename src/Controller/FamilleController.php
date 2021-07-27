@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Famille;
 use App\Repository\FamilleRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,4 +18,13 @@ class FamilleController extends AbstractController
             'familles' => $familles
         ]);
     }
+
+    #[Route('/famille/{id}', name: 'display_famille')]
+    public function display_famille(Famille $famille) :Response
+    {
+      return $this->render('famille/afficherFamille.html.twig', [
+        "famille" => $famille
+      ]);
+    }
 }
+

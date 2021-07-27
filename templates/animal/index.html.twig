@@ -13,7 +13,7 @@
     <h2> <a href="{{path("display_animal", {'id' : animal.id})}}">{{animal.nom}}</a></h2>
     <div>{{ animal.description }}</div>
     <div>
-    <a  class="btn btn-primary"href=""> {{ animal.famille.libelle }}</a>
+    <a  class="btn btn-primary"href="{{path('display_famille', {'id':animal.famille.id})}}"> {{ animal.famille.libelle }}</a>
     </div>
   </div>
 </div>
