@@ -13,5 +13,11 @@
   <div>Poids moyen : {{animal.poids}}</div>
   <div> dangereux : {{ animal.dangereux ? '<span class="badge bg-danger"> OUI </span>' : '<span class="badge bg-success">NON</span>'}}</div>
   </div>
+  <div>
+    Présence de l'animal sur les continents :
+    {% for continent in animal.continents %}
+      <a href="{{path("display_continent", {'id': continent.id})}}" class="btn btn-warning"> {{ continent.libelle }}</a>
+    {% endfor %}
+    </div>
 </div>
 {% endblock %}
