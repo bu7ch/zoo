@@ -4,5 +4,16 @@
 
 {% block monTitre %}Voici la liste des animaux :{% endblock %}
 {% block body %}
-
+{% for animal in animaux %}
+<div class="row align-items-center">
+  <div class="col-2 text-center">
+    <img src="{{asset("images/#{animal.image}")}}" class="img-fluid" alt="">
+  </div>
+  <div class="col-auto">
+    <h2>{{animal.nom}}</h2>
+    <div>{{ animal.description }}</div>
+  </div>
+</div>
+  
+{% endfor %}
 {% endblock %}
